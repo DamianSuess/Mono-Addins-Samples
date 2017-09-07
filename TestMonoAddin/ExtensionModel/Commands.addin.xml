@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Copyright Omnicell, Inc. 2017
+ * Author:  Suess, Damian
+ * Date:    2017-8-4
+ * File:    Commands.addin.xml
+ * Description:
+ *
+-->
+<ExtensionModel>
+
+  <!-- Extension Node Set-->
+
+  <ExtensionNodeSet id="RedRock.UI.Components.Commands.CommandSet">
+    <ExtensionNode name="Command" type="RedRock.UI.Components.Commands.ExtensionNodes.CommandCodon" />
+    <!--
+    <ExtensionNode name="Category" type="MonoDevelop.Components.Commands.ExtensionNodes.CommandCategoryCodon">
+      <ExtensionNode name="Command" type="MonoDevelop.Components.Commands.ExtensionNodes.CommandCodon" />
+    </ExtensionNode>
+    -->
+  </ExtensionNodeSet>
+
+  <!-- Extension Point -->
+  <ExtensionPoint name="User interface commands"
+                  path="/RedRock/UI/Commands">
+    <Description>User interface commands</Description>
+    <ExtensionNodeSet id="RedRock.UI.Components.Commands.CommandSet" />
+  </ExtensionPoint>
+  
+  <!-- Extension -->
+  <Extension path="/RedRock/UI/Commands">
+    <!--
+      WARNING!!
+      Do not change the default command shortcuts!
+    -->
+
+    <Category _name="File" id="File">
+
+      <Command _description="Log out"
+               _label="_Log out"
+               defaultHandler="RedRock.UI.Commands.LogoutHandler"
+               id="RedRock.UI.Commands.FileCommands.Logout" />
+      <Command _description="Quit application"
+               _label="_Quit"
+               defaultHandler="RedRock.UI.Commands.ExitHandler"
+               id="RedRock.UI.Commands.FileCommands.Exit"
+               shortcut="Control|Q" />
+    </Category>
+
+    <!--
+    <Category _name="Tools" id="Tools">
+      <Command _description="" />
+    </Category>
+    -->
+
+    <Category _name="Help" id="Help">
+
+      <Command _description="Show help"
+               _label="Documentation"
+               defaultHandler="RedRock.UI.Commands.HelpHandler"
+               icon="gtk-help"
+               id="RedRock.UI.Commands.HelpCommands.Help"
+               macShortcut="Meta|Alt|?"
+               shortcut="F1" />
+    </Category>
+  </Extension>
+</ExtensionModel>

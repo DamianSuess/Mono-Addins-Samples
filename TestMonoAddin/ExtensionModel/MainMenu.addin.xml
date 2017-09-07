@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Copyright Omnicell, Inc. 2017
+ * Author:  Suess, Damian
+ * Date:    2017-8-4
+ * File:    MainMenu.addin.xml
+ * Description:
+ *  Default main menu for the integrated environment
+-->
+<ExtensionModel>
+
+  <!-- Extension Points -->
+  <ExtensionPoint path="/RedRock/UI/MainMenu"
+                  name="Main menu">
+    <Description>Main menu items.</Description>
+    <ExtensionNodeSet id="RedRock.UI.Components.Commands.ItemSet" />
+  </ExtensionPoint>
+
+  <ExtensionPoint path="/RedRock/UI/TargetSelectorCommands"
+                  name="Target selector commands">
+    <Description>Commands to be shown in the target selector in the main toolbar</Description>
+    <ExtensionNodeSet id="RedRock.UI.Components.Commands.ItemSet" />
+  </ExtensionPoint>
+
+  <!-- Extensions -->
+  <Extension path="/RedRock/UI/MainMenu">
+    <ItemSet id="File" _label="_File">
+      <CommandItem id="RedRock.UI.Commands.FileCommands.LogOff" />
+      <CommandItem id="RedRock.UI.Commands.FileCommands.Exit" />
+    </ItemSet>
+
+    <ItemSet id="Tools" _label="_Tools">
+      <CommandItem id="RedRock.UI.Commands.EditCommands.ExceptionsViewer" />
+      <CommandItem id="RedRock.UI.Commands.EditCommands.LogViewer" />
+      <SeparatorItem id="OptionsSeparator" />
+      <Condition id="UserLevel" value="!User">
+        <CommandItem id="RedRock.UI.Commands.EditCommands.Options" />
+      </Condition>
+    </ItemSet>
+
+    <ItemSet id="Help" _label="_Help">
+      <Condition id="UserLevel" value="!User">
+        <CommandItem id="RedRock.UI.Commands.HelpCommands.Help" />
+      </Condition>
+      <SeparatorItem id="SeparatorAbout" />
+      <CommandItem id="RedRock.UI.Commands.HelpCommands.About" />
+    </ItemSet>
+  
+  </Extension>
+</ExtensionModel>
