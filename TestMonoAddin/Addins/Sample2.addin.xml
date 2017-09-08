@@ -1,0 +1,18 @@
+﻿<ExtensionModel>
+
+  <!-- XML menu -->
+  <Extension path = "/RedRock/UI/MainMenu/Edit">
+    <ItemSet id = "XmlMenu" insertafter = "Insert" _label = "_XML" >
+      <CommandItem id = "MonoDevelop.Xml.Editor.XmlCommands.Validate" />
+      <SeparatorItem id = "Separator1" />
+      <CommandItem id = "MonoDevelop.Xml.Editor.XmlCommands.CreateSchema" />
+      <CommandItem id = "MonoDevelop.Xml.Editor.XmlCommands.GoToSchemaDefinition" />
+      <SeparatorItem id = "Separator2" />
+      <CommandItem id = "MonoDevelop.Xml.Editor.XmlCommands.AssignStylesheet"/>
+      <CommandItem id = "MonoDevelop.Xml.Editor.XmlCommands.OpenStylesheet"/>
+      <CommandItem id = "MonoDevelop.Xml.Editor.XmlCommands.RunXslTransform"/>
+      <SeparatorItem/>
+    </ItemSet>
+  </Extension>
+  
+</ExtensionModel>
