@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+<Addin namespace="RedRock" id="UI" version="1.0" isroot="true">
+  <ExtensionPoint path="/RedRock/UI/ToolbarButtons"
+                  name="Main toolbar">
+    <Description>Main toolbar of the editor. Extensions can register here new buttons.</Description>
+
+    <ExtensionNode name="ToolButton" type="TestMonoAddin.Commands.ExtensionNodes.ToolButtonNode">
+      <Description>Registers a new button in the toolbar</Description>
+    </ExtensionNode>
+
+    <ExtensionNode name="ToolSeparator" type="TestMonoAddin.Commands.ExtensionNodes.ToolSeparatorNode">
+      <Description>Adds a new separator to the toolbar</Description>
+    </ExtensionNode>
+
+  </ExtensionPoint>
+</Addin>
+-->

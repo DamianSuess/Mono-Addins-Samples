@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ExtensionModel>
+
+  <!-- Extensions -->
+  <Extension Path="/RobotUI/MainMenu">
+    <Menu Id="File" Label="_File">
+      <Command id="LogOff" />
+      <Command id="Exit" />
+    </Menu>
+  </Extension>
+  
+</ExtensionModel>

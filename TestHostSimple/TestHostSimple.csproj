@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{439AD4FC-03B2-4812-8623-80C184879964}</ProjectGuid>
+    <ProjectGuid>{D039E7A7-EE67-44BE-8641-71338CF3AAB2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TestMonoAddin</RootNamespace>
-    <AssemblyName>TestMonoAddin</AssemblyName>
+    <RootNamespace>TestHostSimple</RootNamespace>
+    <AssemblyName>TestHostSimple</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\output\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,7 +26,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\output\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -48,26 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Addins\Sample2.cs" />
-    <Compile Include="Addins\SampleToolbar.cs" />
-    <Compile Include="Commands\CommandEntry.cs" />
-    <Compile Include="Commands\CommandEntrySet.cs" />
-    <Compile Include="Commands\ExtensionNodes\CommandCodon.cs" />
-    <Compile Include="Commands\ExtensionNodes\ItemSetCondon.cs" />
-    <Compile Include="Commands\ExtensionNodes\CustomAttribute.cs" />
-    <Compile Include="Commands\ICommand.cs" />
-    <Compile Include="Commands\MenuCommand.cs" />
-    <Compile Include="ExtensionModel\ExtensionPoint.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="ExtensionNodes\ExtensionPoint.cs" />
+    <Compile Include="ExtensionNodes\MainMenuExtensionNode.cs" />
+    <Compile Include="Workbench.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Workbench.Designer.cs">
+      <DependentUpon>Workbench.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Workbench.resx">
+      <DependentUpon>Workbench.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,24 +85,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Addins\Sample2.addin.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ExtensionModel\Commands.addin.xml" />
-    <EmbeddedResource Include="ExtensionModel\MainMenu.addin.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ExtensionModel\Toolbar.addin.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ExtensionModel\ToolbarEP.addin.xml" />
+    <Folder Include="Commands\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icons\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Icons\cut.png" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Icons\new.png" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Icons\open.png" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Icons\paste.png" />
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Icons\save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

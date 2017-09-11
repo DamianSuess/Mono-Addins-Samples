@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using Mono.Addins;
 using TestMonoAddin.Commands;
 
-[assembly: AddinRoot("RedRock", "1.0")]
+[assembly: AddinRoot("RedRock", "1.0", Namespace ="RedRock")]
 
 namespace TestMonoAddin
 {
@@ -38,9 +38,17 @@ namespace TestMonoAddin
       Console.WriteLine($"Addin_OnError: Id[{args.AddinId}]; Message[{args.Message}]; Exception[{args.Exception}]");
     }
 
+    private void LoadExtensions()
+    {
+      //GetCommandEntrySet("/RedRock/UI/MainMenu");
+      GetExtNodes("/RedRock/UI/ToolbarButtons");
+      //GetExtNodes("/RedRock/UI/MainMenu");
+      //GetExtPoints();
+    }
+
     private void GetCommandEntrySet(string addinPath)
     {
-      DebugPrint("CommandEntry {");
+      DebugPrint($"CommandEntry [{addinPath}] (");
 
       CommandEntrySet cmdSet = new CommandEntrySet();
       object[] items = AddinManager.GetExtensionObjects(addinPath, false);
@@ -51,19 +59,19 @@ namespace TestMonoAddin
       }
 
       //return cmdSet;
-      DebugPrint("} CommandEntry");
+      DebugPrint(") CommandEntry");
     }
 
     private void GetExtNodes(string addinPath)
     {
-      DebugPrint("Nodes {");
+      DebugPrint($"Nodes [{addinPath}] (");
 
       foreach (var item in AddinManager.GetExtensionNodes(addinPath))
       {
         DebugPrint("* Got an Ext Node: " + item.ToString());
       }
 
-      DebugPrint("} Nodes");
+      DebugPrint(") Nodes");
     }
 
     private void GetExtPoints()
@@ -87,15 +95,12 @@ namespace TestMonoAddin
     private void Form1_Load(object sender, EventArgs e)
     {
       InitAddins();
-
-      btnPullData_Click(sender, e);
+      LoadExtensions();
     }
 
     private void btnPullData_Click(object sender, EventArgs e)
     {
-      GetCommandEntrySet("/RedRock/UI/MainMenu");
-      GetExtNodes("/RedRock/UI/MainMenu");
-      GetExtPoints();
+      LoadExtensions();
     }
 
     private void DebugPrint(string buff)

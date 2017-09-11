@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Addin namespace="RedRock" id="UI" version="1.0">
+  <Extension path="/RedRock/UI/Toolbar">
+    <Button id="New" icon="ico-new" />
+    <Button id="Open" icon="ico-open" />
+    <Separator id="FileSelectionSeparator" />
+    <Button id="Copy" icon="ico-copy" />
+  </Extension>
+</Addin>

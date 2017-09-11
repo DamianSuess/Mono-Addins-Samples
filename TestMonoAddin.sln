@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMonoAddin", "TestMonoAd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMonoAddin.SampleAddin", "TestMonoAddin.SampleAddin\TestMonoAddin.SampleAddin.csproj", "{6F3895DD-AE5F-4F32-812A-5E66145561AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHostSimple", "TestHostSimple\TestHostSimple.csproj", "{D039E7A7-EE67-44BE-8641-71338CF3AAB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6F3895DD-AE5F-4F32-812A-5E66145561AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F3895DD-AE5F-4F32-812A-5E66145561AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F3895DD-AE5F-4F32-812A-5E66145561AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D039E7A7-EE67-44BE-8641-71338CF3AAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D039E7A7-EE67-44BE-8641-71338CF3AAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D039E7A7-EE67-44BE-8641-71338CF3AAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D039E7A7-EE67-44BE-8641-71338CF3AAB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
