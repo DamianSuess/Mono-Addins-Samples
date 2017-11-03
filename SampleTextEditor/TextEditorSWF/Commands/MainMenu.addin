@@ -1,10 +1,11 @@
 ﻿<ExtensionModel>
   <!-- Defines the main menu. The extension point is defined in ExtensionPoints.cs -->
   <Extension path="/TextEditor/MainMenu">
-    <Menu id="File" label="File">
+    <Menu id="File" label="&amp;File">
       <Command id="New" />
       <Command id="Open" />
       <Command id="Save" />
+      <!--<Command id="FakeItem" /> -->
       <Separator id="ExitSeparator"/>
       <Command id="Exit" />
     </Menu>

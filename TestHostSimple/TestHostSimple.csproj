@@ -48,8 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExtensionNodes\CommandItemExtensionNode.cs" />
     <Compile Include="ExtensionNodes\ExtensionPoint.cs" />
     <Compile Include="ExtensionNodes\MainMenuExtensionNode.cs" />
+    <Compile Include="ExtensionNodes\SeparatorExtensionNode.cs" />
     <Compile Include="Workbench.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icons\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExtensionModel\MainMenu.addin.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

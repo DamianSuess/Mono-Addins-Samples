@@ -1,12 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ExtensionModel>
-
-  <!-- Extensions -->
+  <!-- Extension for MainMenu defined in ExtensionPoints.cs -->
   <Extension Path="/RobotUI/MainMenu">
     <Menu Id="File" Label="_File">
-      <Command id="LogOff" />
-      <Command id="Exit" />
+      <Command Id="LogOff" />
+      <!-- <Separator Id="ExitSeparator" /> -->
+      <Command Id="Exit" />
+    </Menu>
+
+    <Menu Id="Tools" Label="_Tools">
+      <Command Id="ExceptionViewer" />
+      <Command Id="LogViewer" />
+      <!--
+      <Separator Id="OptionsSeparator" />
+      <Condition id="UserLevel" value="!User">
+        <Command Id="Options" />
+      </Condition>
+      -->
     </Menu>
   </Extension>
-  
 </ExtensionModel>

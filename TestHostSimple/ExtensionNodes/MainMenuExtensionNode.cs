@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using Mono.Addins;
 
 namespace TestHostSimple.ExtensionNodes
 {
   [ExtensionNode("Menu")]
+  [ExtensionNodeChild(typeof(CommandItemExtensionNode))]
+  [ExtensionNodeChild(typeof(SeparatorExtensionNode))]
   public class MainMenuExtensionNode : ExtensionNode  //, IUserInterfaceItem
   {
     [NodeAttribute("Label")]
@@ -29,5 +26,6 @@ namespace TestHostSimple.ExtensionNodes
     {
       return new ToolStripDropDownButton();
     }
+
   }
 }
