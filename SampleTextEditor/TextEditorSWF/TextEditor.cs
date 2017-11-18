@@ -18,7 +18,6 @@ namespace TextEditorSWF
 
       foreach (IUserInterfaceItem item in AddinManager.GetExtensionNodes("/TextEditor/MainMenu"))
       {
-        Console.WriteLine("Next Item");
         Console.WriteLine("item: " + item.ToString());
           //item.CreateMenuItem();
       }

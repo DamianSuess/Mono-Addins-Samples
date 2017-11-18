@@ -13,6 +13,7 @@
       <Command id="Cut" />
       <Command id="Copy" />
       <Command id="Paste" />
+      <Command id="CustomItem" />
     </Menu>
   </Extension>
 </ExtensionModel>

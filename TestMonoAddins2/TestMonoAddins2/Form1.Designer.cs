@@ -39,6 +39,7 @@
       this.BtnPullAppAddins.TabIndex = 0;
       this.BtnPullAppAddins.Text = "Pull App-Addins";
       this.BtnPullAppAddins.UseVisualStyleBackColor = true;
+      this.BtnPullAppAddins.Click += new System.EventHandler(this.BtnPullAppAddins_Click);
       // 
       // Form1
       // 
@@ -48,6 +49,7 @@
       this.Controls.Add(this.BtnPullAppAddins);
       this.Name = "Form1";
       this.Text = "Form1";
+      this.Load += new System.EventHandler(this.Form1_Load);
       this.ResumeLayout(false);
 
     }
