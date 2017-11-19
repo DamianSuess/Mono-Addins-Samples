@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using Mono.Addins;
 
-namespace TestMonoAddins2.InternalAddin
+namespace TestMonoAddins.InternalAddin
 {
   [Extension("/TestApp/StartupHandler")]
   public class WelcomeStartupExtension : IStartupExtension

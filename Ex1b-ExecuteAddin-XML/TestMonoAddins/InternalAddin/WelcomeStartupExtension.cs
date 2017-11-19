@@ -2,9 +2,10 @@
 using System.Windows.Forms;
 using Mono.Addins;
 
-namespace TestMonoAddins2.InternalAddin
+namespace TestMonoAddins.InternalAddin
 {
-  [Extension("/TestApp/StartupHandler")]
+  // The following Attribute is defined in XML
+  //[Extension("/TestApp/StartupHandler")]
   public class WelcomeStartupExtension : IStartupExtension
   {
     public WelcomeStartupExtension()

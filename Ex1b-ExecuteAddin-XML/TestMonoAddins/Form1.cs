@@ -2,14 +2,13 @@
 using System.Windows.Forms;
 using Mono.Addins;
 
-[assembly: AddinRoot("TestApp", "1.0")]
+// The following Attribute is defined in XML
+//[assembly: AddinRoot("TestApp", "1.0")]
 
-namespace TestMonoAddins2
+namespace TestMonoAddins
 {
   public partial class Form1 : Form
   {
-    //private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-
     private string StartupExtensionPath = "/TestApp/StartupHandler";
 
     public Form1()
@@ -22,22 +21,6 @@ namespace TestMonoAddins2
       Mono.Addins.AddinManager.AddExtensionNodeHandler(
         StartupExtensionPath,
         StartupHandler_ExtensionChanged);
-    }
-
-    private void BtnPullAppAddins_Click(object sender, EventArgs e)
-    {
-      LogDebug("Available Startup Handlers {");
-
-      var exts = AddinManager.GetExtensionObjects<IStartupExtension>(false);
-      foreach (IStartupExtension ext in exts)
-      {
-        string title = ext.Title;
-        ext.Run();
-
-        LogDebug("  Title: " + title);
-      }
-
-      LogDebug("}");
     }
 
     private void StartupHandler_ExtensionChanged(object sender, Mono.Addins.ExtensionNodeEventArgs args)

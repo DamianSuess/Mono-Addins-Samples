@@ -4,7 +4,7 @@ using Mono.Addins;
 using TestMonoAddins2;
 
 [assembly: Addin]
-[assembly: AddinDependency("RobotUI", "1.0")]
+[assembly: AddinDependency("TestApp", "1.0")]
 
 namespace ExtendAppStartup1
 {
