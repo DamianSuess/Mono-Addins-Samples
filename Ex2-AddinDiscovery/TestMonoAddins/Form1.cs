@@ -4,12 +4,10 @@ using Mono.Addins;
 
 [assembly: AddinRoot("TestApp", "1.0")]
 
-namespace TestMonoAddins2
+namespace TestMonoAddins
 {
   public partial class Form1 : Form
   {
-    //private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-
     private string StartupExtensionPath = "/TestApp/StartupHandler";
 
     public Form1()
@@ -28,14 +26,31 @@ namespace TestMonoAddins2
     {
       LogDebug("Available Startup Handlers {");
 
-      var exts = AddinManager.GetExtensionObjects<IStartupExtension>(false);
-      foreach (IStartupExtension ext in exts)
+      // Read-only just get the title
+      foreach (TypeExtensionNode node in AddinManager.GetExtensionNodes(StartupExtensionPath))
       {
-        string title = ext.Title;
-        ext.Run();
-
-        LogDebug("  Title: " + title);
+        IStartupExtension ext = (IStartupExtension)node.CreateInstance();
+        LogDebug($"Add-in Title: {ext.Title}");
       }
+
+      // Recycle list and execute
+      foreach (TypeExtensionNode node in AddinManager.GetExtensionNodes(StartupExtensionPath))
+      {
+        IStartupExtension ext = (IStartupExtension)node.CreateInstance();
+        LogDebug($"Running Add-in '{ext.Title}'");
+        ext.Run();
+      }
+
+      //foreach(TypeExtensionNode<IStartupExtension> node in AddinManager.GetExtensionNodes<>)
+
+      //IStartupExtension[] exts = AddinManager.GetExtensionObjects<IStartupExtension>(true);
+      //foreach (IStartupExtension ext in exts)
+      //{
+      //  string title = ext.Title;
+      //  ext.Run();
+
+      //  LogDebug("  Title: " + title);
+      //}
 
       LogDebug("}");
     }

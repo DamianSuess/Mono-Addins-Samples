@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace TestMonoAddins2
+namespace TestMonoAddins
 {
   internal static class Program
   {

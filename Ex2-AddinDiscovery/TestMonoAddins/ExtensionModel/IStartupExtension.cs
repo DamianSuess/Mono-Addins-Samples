@@ -1,9 +1,6 @@
-﻿//using Mono.Addins;
+﻿using Mono.Addins;
 
-//[assembly: ExtensionPoint("/TestApp/StartupHandler")]
-using Mono.Addins;
-
-namespace TestMonoAddins2
+namespace TestMonoAddins
 {
   [TypeExtensionPoint(Path = "/TestApp/StartupHandler")]
   public interface IStartupExtension

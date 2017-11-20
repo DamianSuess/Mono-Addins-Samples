@@ -1,4 +1,4 @@
-﻿namespace TestMonoAddins2
+﻿namespace TestMonoAddins
 {
   partial class Form1
   {
