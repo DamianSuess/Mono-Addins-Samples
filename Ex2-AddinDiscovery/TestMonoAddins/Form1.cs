@@ -31,6 +31,11 @@ namespace TestMonoAddins
       {
         IStartupExtension ext = (IStartupExtension)node.CreateInstance();
         LogDebug($"Add-in Title: {ext.Title}");
+
+        foreach(NodeElement nloc in node.ChildNodes)
+        {
+          MessageBox.Show("HEY!" + nloc.NodeName);
+        }
       }
 
       // Recycle list and execute
@@ -42,13 +47,11 @@ namespace TestMonoAddins
       }
 
       //foreach(TypeExtensionNode<IStartupExtension> node in AddinManager.GetExtensionNodes<>)
-
       //IStartupExtension[] exts = AddinManager.GetExtensionObjects<IStartupExtension>(true);
       //foreach (IStartupExtension ext in exts)
       //{
       //  string title = ext.Title;
       //  ext.Run();
-
       //  LogDebug("  Title: " + title);
       //}
 
@@ -58,13 +61,18 @@ namespace TestMonoAddins
     private void StartupHandler_ExtensionChanged(object sender, Mono.Addins.ExtensionNodeEventArgs args)
     {
       LogDebug("OnStartChanged {");
+      LogDebug($"  Id      - {args.ExtensionNode.Id}");
       LogDebug($"  Path    - {args.Path}");
       LogDebug($"  Node    - {args.ExtensionNode}");
       LogDebug($"  Object  - {args.ExtensionObject}");
       LogDebug($"  Changed - {args.Change.ToString()}");
 
+      LogDebug("--[ ExtensionNode ]------");
       Mono.Addins.TypeExtensionNode extNode = args.ExtensionNode as Mono.Addins.TypeExtensionNode;
-      LogDebug($"  ExtNode: {extNode.ToString()}");
+      LogDebug($"  Id      - {extNode.Id}");
+      LogDebug($"  ToString- {extNode.ToString()}");
+      LogDebug($"  TypeName- {extNode.TypeName}");
+
 
       LogDebug("  Running...");
       IStartupExtension ext = (IStartupExtension)args.ExtensionObject;

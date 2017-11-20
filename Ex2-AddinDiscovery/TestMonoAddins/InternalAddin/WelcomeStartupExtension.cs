@@ -16,8 +16,8 @@ namespace TestMonoAddins.InternalAddin
 
     public void Run()
     {
-      Console.WriteLine("Welcome Startup :: Run");
-      MessageBox.Show("Welcome Add-in!");
+      Console.WriteLine("Internal Welcome Startup :: Run");
+      MessageBox.Show("Internal Welcome Add-in!", Title);
     }
   }
 }

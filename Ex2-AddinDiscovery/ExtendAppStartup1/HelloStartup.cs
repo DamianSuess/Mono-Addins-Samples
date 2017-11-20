@@ -21,7 +21,7 @@ namespace ExtendAppStartup1
     public void Run()
     {
       Console.WriteLine("Hello Startup :: Run");
-      MessageBox.Show("Hello Startup from outside DLL", "External Add-in");
+      MessageBox.Show("External Hello Startup from outside DLL", Title);
     }
   }
 }
