@@ -1,12 +1,12 @@
 ﻿<Addin
-  id="ExternalStartupAddinFromXML"
+  id="ExternalStartupXmlAddin"
   namespace="TestApp"
   name="External Addin from XML"
   version="1.0">
 
   <!-- Name of our add-in DLL -->
   <Runtime>
-    <Import Assembly="ExternalAddinStartup2XML.dll" />
+    <Import Assembly="ExternalStartupXmlAddin.dll" />
   </Runtime>
 
   <!-- Our Add-in Host -->
@@ -16,6 +16,7 @@
 
   <!-- Built-in Add-ins -->
   <Extension path="/TestApp/StartupHandler">
-    <StartupHandler type="ExternalAddinStartup2XML.HelloXML" />
+    <!-- <StartupHandler type="ExternalStartupXmlAddin.HelloXML" /> -->
+    <IStartupExtension type="ExternalStartupXmlAddin.HelloXML" />
   </Extension>
 </Addin>

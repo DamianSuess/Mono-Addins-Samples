@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ExtendAppStartup1")]
+[assembly: AssemblyTitle("ExternalStartupXmlAddin")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ExtendAppStartup1")]
+[assembly: AssemblyProduct("ExternalStartupXmlAddin")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("7ea0777f-22e6-41f7-9125-919c456ee28f")]
+[assembly: Guid("4478edef-fd64-4fd2-9e1f-47dbe50e3fca")]
 
 // Version information for an assembly consists of the following four values:
 //

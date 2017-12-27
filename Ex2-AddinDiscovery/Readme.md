@@ -1,5 +1,7 @@
 ## In this Example
-1. We are introducing an **external add-in** DLL file.
+1. We are introducing 2 **external add-in** DLLs.
+    * ExternalStartupAddin - _Registers itself using Class Attributes._
+    * ExternalStartupXmlAddin - _Registers itself using an XML file._
 2. We're **re-executing** via WinForm button click.
 
 ## Querying Add-ins

@@ -6,7 +6,7 @@ using TestMonoAddins;
 [assembly: Addin]
 [assembly: AddinDependency("TestApp", "1.0")]
 
-namespace ExtendAppStartup1
+namespace ExternalStartupAddin
 {
   [Extension("/TestApp/StartupHandler")]
   public class HelloStartup : IStartupExtension
