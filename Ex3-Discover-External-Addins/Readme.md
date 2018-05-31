@@ -1,10 +1,17 @@
+# Example 3
+
 ## In this Example
+
 1. The **ExtensionPoint** is defined using a class **attribute**.
 2. We are introducing 2 **external add-in** DLLs, and 1 internal add-in.
     * ExternalAttributeAddin - _Registers itself using class attributes._
     * ExternalXmlAddin - _Registers itself using an XML manifest._
     * InternalAttributeAddin - _Registers iteself using class attributes._
 3. We're **re-executing** via WinForm button click.
+
+## What's New?
+
+Since the host is defining the **ExtensionPoint** via class attributes and we're also using an external DLL via XML manifest, you MUST define the **NodeName**. Otherwise, the system will get confused on what Type to assign.
 
 ## Querying Add-ins
 

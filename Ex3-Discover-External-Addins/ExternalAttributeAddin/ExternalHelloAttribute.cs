@@ -8,7 +8,8 @@ using TestMonoAddins;
 
 namespace ExternalAttributeAddin
 {
-  [Extension("/TestApp/StartupHandler")]
+  [Extension(Path = "/TestApp/StartupHandler",
+             NodeName = "StartupAddin")]
   public class ExternalHelloAttribute : IStartupExtension
   {
     public ExternalHelloAttribute()

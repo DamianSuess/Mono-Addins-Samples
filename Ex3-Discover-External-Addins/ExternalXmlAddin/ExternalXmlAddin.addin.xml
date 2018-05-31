@@ -17,7 +17,7 @@
 
   <!-- Built-in Add-ins -->
   <Extension path="/TestApp/StartupHandler">
-    <!-- <StartupHandler type="ExternalStartupXmlAddin.ExternalHelloXML" /> -->
-    <IStartupExtension type="ExternalStartupXmlAddin.ExternalHelloXML" />
+    <!-- NodeName "StartupAddin" specified in host-app's ExtensionPoint, "IStartupExtension" -->
+    <StartupAddin type="ExternalXmlAddin.ExternalHelloXML" />
   </Extension>
 </Addin>

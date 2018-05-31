@@ -2,8 +2,8 @@
 
 namespace TestMonoAddins
 {
-  [TypeExtensionPoint(Path = "/TestApp/StartupHandler")]
-  //[TypeExtensionPoint(Path = "/TestApp/StartupHandler", NodeName="StartupHandler")]
+  [TypeExtensionPoint(Path = "/TestApp/StartupHandler",
+                      NodeName = "StartupAddin")]
   public interface IStartupExtension
   {
     string Title { get; }

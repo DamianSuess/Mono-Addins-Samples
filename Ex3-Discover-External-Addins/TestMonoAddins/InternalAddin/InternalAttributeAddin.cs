@@ -4,7 +4,8 @@ using Mono.Addins;
 
 namespace TestMonoAddins.InternalAddin
 {
-  [Extension("/TestApp/StartupHandler")]
+  [Extension(Path = "/TestApp/StartupHandler",
+             NodeName = "StartupAddin")]
   public class InternalAttributeAddin : IStartupExtension
   {
     public InternalAttributeAddin()
