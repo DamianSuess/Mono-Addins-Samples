@@ -1,4 +1,9 @@
-﻿<Addin namespace="TestApp" id="TestApp" version="1.0" isroot="true" compatVersion="1.0">
+﻿<Addin namespace="TestApp"
+       id="TestApp"
+       version="1.0"
+       isroot="true"
+       compatVersion="1.0">
+
   <Runtime>
     <Import Assembly="TestMonoAddins.exe" />
   </Runtime>
