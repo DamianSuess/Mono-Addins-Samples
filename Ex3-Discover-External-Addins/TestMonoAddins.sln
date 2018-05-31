@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Addins", "Addins", "{9712F1B6-2D5A-4515-AFC4-A1996CB411E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalStartupAddin", "ExternalStartupAddin\ExternalStartupAddin.csproj", "{7EA0777F-22E6-41F7-9125-919C456EE28F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalAttributeAddin", "ExternalAttributeAddin\ExternalAttributeAddin.csproj", "{7EA0777F-22E6-41F7-9125-919C456EE28F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMonoAddins", "TestMonoAddins\TestMonoAddins.csproj", "{DECDEA3A-3F25-43BA-9AA6-D90B5A871F54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalStartupXmlAddin", "ExternalStartupXmlAddin\ExternalStartupXmlAddin.csproj", "{4478EDEF-FD64-4FD2-9E1F-47DBE50E3FCA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExternalXmlAddin", "ExternalXmlAddin\ExternalXmlAddin.csproj", "{4478EDEF-FD64-4FD2-9E1F-47DBE50E3FCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

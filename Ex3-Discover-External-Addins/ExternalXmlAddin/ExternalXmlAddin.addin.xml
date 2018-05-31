@@ -1,0 +1,21 @@
+﻿<Addin id="ExternalStartupXmlAddin"
+       namespace="TestApp"
+       name="External XML Addin"
+       version="1.0">
+
+  <!-- Attach to our add-in DLL -->
+  <Runtime>
+    <Import Assembly="ExternalStartupXmlAddin.dll" />
+  </Runtime>
+
+  <!-- Our Add-in Host -->
+  <Dependencies>
+    <Addin id="TestApp" version="1.0" />
+  </Dependencies>
+
+  <!-- Built-in Add-ins -->
+  <Extension path="/TestApp/StartupHandler">
+    <!-- <StartupHandler type="ExternalStartupXmlAddin.ExternalHelloXML" /> -->
+    <IStartupExtension type="ExternalStartupXmlAddin.ExternalHelloXML" />
+  </Extension>
+</Addin>

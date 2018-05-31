@@ -1,8 +1,10 @@
 ## In this Example
-1. We are introducing 2 **external add-in** DLLs.
-    * ExternalStartupAddin - _Registers itself using Class Attributes._
-    * ExternalStartupXmlAddin - _Registers itself using an XML file._
-2. We're **re-executing** via WinForm button click.
+1. The **ExtensionPoint** is defined using a class **attribute**.
+2. We are introducing 2 **external add-in** DLLs, and 1 internal add-in.
+    * ExternalAttributeAddin - _Registers itself using class attributes._
+    * ExternalXmlAddin - _Registers itself using an XML manifest._
+    * InternalAttributeAddin - _Registers iteself using class attributes._
+3. We're **re-executing** via WinForm button click.
 
 ## Querying Add-ins
 

@@ -9,19 +9,19 @@ using TestMonoAddins;
 namespace ExternalStartupAddin
 {
   [Extension("/TestApp/StartupHandler")]
-  public class HelloStartup : IStartupExtension
+  public class ExternalHelloAttribute : IStartupExtension
   {
-    public HelloStartup()
+    public ExternalHelloAttribute()
     {
-      this.Title = "External Hello Add-In";
+      this.Title = "Title for - External Hello Attribute Add-In";
     }
 
     public string Title { get; }
 
     public void Run()
     {
-      Console.WriteLine("Hello Startup :: Run");
-      MessageBox.Show("External Hello Startup from outside DLL", Title);
+      Console.WriteLine(":: ExternalHelloAttribute.Run()");
+      MessageBox.Show("Hello from, external Attribute defined Add-in!", Title);
     }
   }
 }

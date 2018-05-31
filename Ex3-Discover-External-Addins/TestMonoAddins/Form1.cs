@@ -14,6 +14,8 @@ namespace TestMonoAddins
     {
       InitializeComponent();
 
+      LogDebug("Initializing system ...");
+
       Mono.Addins.AddinManager.Initialize(".");
       Mono.Addins.AddinManager.Registry.Update();
 
@@ -24,15 +26,16 @@ namespace TestMonoAddins
 
     private void BtnPullAppAddins_Click(object sender, EventArgs e)
     {
-      LogDebug("Available Startup Handlers {");
+      LogDebug("Available Startup Handlers");
+      LogDebug("{");
 
       // Read-only just get the title
       foreach (TypeExtensionNode node in AddinManager.GetExtensionNodes(StartupExtensionPath))
       {
         IStartupExtension ext = (IStartupExtension)node.CreateInstance();
-        LogDebug($"Add-in Title: {ext.Title}");
+        LogDebug($"  Add-in Title: {ext.Title}");
 
-        foreach(NodeElement nloc in node.ChildNodes)
+        foreach (NodeElement nloc in node.ChildNodes)
         {
           MessageBox.Show("HEY!" + nloc.NodeName);
         }
@@ -42,7 +45,7 @@ namespace TestMonoAddins
       foreach (TypeExtensionNode node in AddinManager.GetExtensionNodes(StartupExtensionPath))
       {
         IStartupExtension ext = (IStartupExtension)node.CreateInstance();
-        LogDebug($"Running Add-in '{ext.Title}'");
+        LogDebug($"  Running Add-in titled, '{ext.Title}'");
         ext.Run();
       }
 
@@ -56,6 +59,15 @@ namespace TestMonoAddins
       //}
 
       LogDebug("}");
+    }
+
+    private void Form1_Load(object sender, EventArgs e)
+    {
+    }
+
+    private void LogDebug(string msg)
+    {
+      Console.WriteLine(msg);
     }
 
     private void StartupHandler_ExtensionChanged(object sender, Mono.Addins.ExtensionNodeEventArgs args)
@@ -73,21 +85,11 @@ namespace TestMonoAddins
       LogDebug($"  ToString- {extNode.ToString()}");
       LogDebug($"  TypeName- {extNode.TypeName}");
 
-
       LogDebug("  Running...");
       IStartupExtension ext = (IStartupExtension)args.ExtensionObject;
       ext.Run();
 
       LogDebug("}");
-    }
-
-    private void LogDebug(string msg)
-    {
-      Console.WriteLine(msg);
-    }
-
-    private void Form1_Load(object sender, EventArgs e)
-    {
     }
   }
 }
