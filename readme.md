@@ -11,11 +11,18 @@ For official help documentation check out [Mono.Addins Wiki page](https://github
 
 ## Included Samples
 
-* Ex1a - Simple add-in execution (_C# Attribute based_)
-* Ex1b - Simple add-in execution (_XML defined add-ins_)
-* Ex2 - External Addin Discovery
-* Ex3 - Addin Attributes (_in progress_)
+* Ex1 - Load internal add-in defined by class attributes
+* Ex2 - Load internal add-in defined by XML manifest
+* Ex3 - Load external add-ins
+    * Host app is defines ExtensionPoint via class attributes
+    * One internal add-in (_class attribute_)
+    * One external add-in (_class attribute_)
+    * One external add-in (_XML manifest_)
+* Ex4 - Addin Attributes - _work in progress_
 * SampleTextEditor - _Official example_
 
 ## Help Expand
 Help make this better by creating PULL requests! It's as simple as that. Forks are nice, but PULL 
+
+
+Copyright 2017-2018 Xeno Innovations, Inc.
