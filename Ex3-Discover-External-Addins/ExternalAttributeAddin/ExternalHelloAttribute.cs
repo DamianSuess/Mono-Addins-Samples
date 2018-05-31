@@ -6,7 +6,7 @@ using TestMonoAddins;
 [assembly: Addin]
 [assembly: AddinDependency("TestApp", "1.0")]
 
-namespace ExternalStartupAddin
+namespace ExternalAttributeAddin
 {
   [Extension("/TestApp/StartupHandler")]
   public class ExternalHelloAttribute : IStartupExtension

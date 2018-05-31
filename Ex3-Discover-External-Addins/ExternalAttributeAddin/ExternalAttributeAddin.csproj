@@ -7,8 +7,8 @@
     <ProjectGuid>{7EA0777F-22E6-41F7-9125-919C456EE28F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExternalStartupAddin</RootNamespace>
-    <AssemblyName>ExternalStartupAddin</AssemblyName>
+    <RootNamespace>ExternalAttributeAddin</RootNamespace>
+    <AssemblyName>ExternalAttributeAddin</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

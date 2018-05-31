@@ -7,8 +7,8 @@
     <ProjectGuid>{4478EDEF-FD64-4FD2-9E1F-47DBE50E3FCA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExternalStartupXmlAddin</RootNamespace>
-    <AssemblyName>ExternalStartupXmlAddin</AssemblyName>
+    <RootNamespace>ExternalXmlAddin</RootNamespace>
+    <AssemblyName>ExternalXmlAddin</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

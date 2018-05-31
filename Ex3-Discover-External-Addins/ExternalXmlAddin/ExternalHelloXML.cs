@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using TestMonoAddins;
 
-namespace ExternalStartupXmlAddin
+namespace ExternalXmlAddin
 {
   public class ExternalHelloXML : IStartupExtension
   {
