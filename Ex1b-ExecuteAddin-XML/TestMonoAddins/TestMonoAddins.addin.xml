@@ -2,12 +2,23 @@
   <Runtime>
     <Import Assembly="TestMonoAddins.exe" />
   </Runtime>
-  
-  <ExtensionPoint path="/TestApp/StartupHandler">
-		<ExtensionNode name="StartupHandler" objectType="TestMonoAddins.IStartupExtension" />
-	</ExtensionPoint>
 
-  <!-- Built-in Add-ins -->
+  <!-- Create Extension Point to register on -->
+  <ExtensionPoint path="/TestApp/StartupHandler">
+    <ExtensionNode name="StartupHandler" objectType="TestMonoAddins.IStartupExtension" />
+  </ExtensionPoint>
+
+  <!-- Create Extensions (add-ins) for our Extension Points -->
+
+  <Extension path="/TestApp/StartupHandler">
+    <StartupHandler type="TestMonoAddins.InternalAddin.SampleStartupExtension" />
+  </Extension>
+  
+  <Extension path="/TestApp/StartupHandler">
+    <StartupHandler type="TestMonoAddins.InternalAddin.WelcomeStartupExtension" />
+  </Extension>
+
+  <!-- Notice, if we have this twice, it's called twice -->
   <Extension path="/TestApp/StartupHandler">
     <StartupHandler type="TestMonoAddins.InternalAddin.WelcomeStartupExtension" />
   </Extension>
