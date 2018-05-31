@@ -1,5 +1,5 @@
 ﻿<Addin id="ExternalXmlAddin"
-       namespace="TestApp"
+       namespace=""
        name="External XML Addin"
        description="Example of an external add-in using an XML manifest"
        category="Startup"
