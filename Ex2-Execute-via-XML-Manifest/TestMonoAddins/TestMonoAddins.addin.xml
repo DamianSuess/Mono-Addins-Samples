@@ -23,7 +23,7 @@
     <StartupHandler type="TestMonoAddins.InternalAddin.WelcomeStartupExtension" />
   </Extension>
 
-  <!-- Notice, if we have this twice, it's called twice -->
+  <!-- Notice: since we defined this twice, it's called twice -->
   <Extension path="/TestApp/StartupHandler">
     <StartupHandler type="TestMonoAddins.InternalAddin.WelcomeStartupExtension" />
   </Extension>

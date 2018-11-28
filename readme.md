@@ -14,7 +14,7 @@ For official help documentation check out [Mono.Addins Wiki page](https://github
 * Ex1 - Load internal add-in defined by class attributes
 * Ex2 - Load internal add-in defined by XML manifest
 * Ex3 - Load external add-ins
-    * Host app is defines ExtensionPoint via class attributes
+    * Host app defines ExtensionPoint via class attributes
     * One internal add-in (_class attribute_)
     * One external add-in (_class attribute_)
     * One external add-in (_XML manifest_)

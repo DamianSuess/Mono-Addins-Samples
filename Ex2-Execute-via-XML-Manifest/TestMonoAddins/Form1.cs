@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using Mono.Addins;
 
 // The following Attribute is defined in XML
 //[assembly: AddinRoot("TestApp", "1.0")]
