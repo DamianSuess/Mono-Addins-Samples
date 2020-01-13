@@ -1,10 +1,11 @@
-Examples for **Mono.Addins**
+# Examples using **Mono.Addins**
 
 ## About
 This repo provides simple sequential sample projects for implementing [Mono.Addins](https://github.com/mono/mono-addins). Each project will implement a new feature/concept to assist you in learning and as a reference point.
 
 Really enjoy using Mono.Addins, however there is a lack of consistent examples. Their text editor sample does dive in pretty good, so check it out if you're beyond the beginner steps.
 
+Author: [Damian Suess](https://www.linkedin.com/in/damiansuess/)
 
 ## Further Learning
 For official help documentation check out [Mono.Addins Wiki page](https://github.com/mono/mono-addins/wiki).
@@ -22,7 +23,7 @@ For official help documentation check out [Mono.Addins Wiki page](https://github
 * SampleTextEditor - _Official example_
 
 ## Help Expand
-Help make this better by creating PULL requests! It's as simple as that. Forks are nice, but PULL 
+Help make this better by creating PULL requests! It's as simple as that. Forks are nice, but PULL
 
 
 Copyright 2017-2018 Xeno Innovations, Inc.
